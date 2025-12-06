@@ -57,10 +57,11 @@ function print_error() {
 }
 
 function print_input_form() {
+    global $day_no;
     ?>
         <form method="POST" action="." enctype="multipart/form-data" class="two-col-grid">
             <label for="dayNo">Day Number:</label>
-            <input type="number" id="dayNo" name="dayNo">
+            <input type="number" id="dayNo" name="dayNo" value="<?php print($_POST["dayNo"])?>">
             <label for="data">Puzzle Data:</label>
             <input type="file" id="data" name="data">
             <button type="submit">Go!</button>
